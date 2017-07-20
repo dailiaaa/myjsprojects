@@ -28,7 +28,10 @@ var view = {
 			view.render();
 		}, false);
 		this.wrapper.addEventListener('click', function(e) {
-			console.log(e.target.innerText);
+			if (e.target.getAttribute('class') == 'grid') {
+				console.log(e.target.innerText);
+			}
+			
 		}, false);
 	},
 	render: function() {
